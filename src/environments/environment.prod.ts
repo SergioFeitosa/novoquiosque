@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   ApiURL : 'http://localhost:8000',
   telefone: 0,
   codigo: 123,

@@ -1,9 +1,9 @@
 import { Component, OnInit, Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Pedido } from '../pedido/pedido';
 import { Produto } from '../produto/produto';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLinkActive, RouterModule } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-caminho-menu',

@@ -1,7 +1,8 @@
 
+import { environment } from '../../environments/environment.prod';
 import { CardapioPrincipalService } from './cardapio-principal.service';
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+
 
 @Component({
   selector: 'app-cardapio-principal',
