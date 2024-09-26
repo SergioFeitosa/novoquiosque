@@ -4,7 +4,6 @@ import { Injectable, Type } from '@angular/core';
 import { Produto } from './produto';
 import { MatSnackBar as MatSnackBar } from '@angular/material/snack-bar';
 import { Carrinho } from '../carrinho/carrinho';
-import { environment } from 'src/environments/environment';
 import { CarrinhoService } from '../carrinho/carrinho.service';
 
 

@@ -1,10 +1,27 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { FechamentoService } from './fechamento.service';
 import { Fechamento } from './fechamento';
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment.prod';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
 @Component({
   templateUrl: './fechamento-list.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
+
 })
 
 export class FechamentoListComponent implements OnInit {

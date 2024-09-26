@@ -4,6 +4,7 @@ import { Component, OnChanges, Input } from '@angular/core';
   selector: 'app-star',
   templateUrl: './star.component.html',
   styleUrls: ['./star.component.css'],
+  standalone: true
 })
 
 export class StarComponent implements OnChanges{

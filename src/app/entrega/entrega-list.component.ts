@@ -1,4 +1,3 @@
-import { environment } from 'src/environments/environment';
 import { EntregaService } from './entrega.service';
 import { Entrega } from './entrega';
 import { Component, OnInit } from '@angular/core';
@@ -7,12 +6,28 @@ import { Pedido } from '../pedido/pedido';
 import { PedidoService } from '../pedido/pedido.service';
 import { CarrinhoService } from '../carrinho/carrinho.service';
 import { Carrinho } from '../carrinho/carrinho';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
+import { environment } from '../../environments/environment.prod';
 
 @Component({
   templateUrl: './entrega-list.component.html',
-  styleUrls: ['./entrega-list.component.css']
-
+  styleUrls: ['./entrega-list.component.css'] ,
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
 })
 
 export class EntregaListComponent implements OnInit {

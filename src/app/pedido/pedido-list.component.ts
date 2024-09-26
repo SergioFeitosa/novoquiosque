@@ -1,7 +1,6 @@
-import { environment } from 'src/environments/environment';
 import { ProdutoService } from './../produto/produto.service';
 import { Produto } from './../produto/produto';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { PedidoService } from './pedido.service';
 import { Pedido } from './pedido';
 import { Component, OnInit } from '@angular/core';
@@ -10,9 +9,25 @@ import { EntregaService } from '../entrega/entrega.service';
 import { interval, Subscription } from 'rxjs';
 import { Carrinho } from '../carrinho/carrinho';
 import { CarrinhoService } from '../carrinho/carrinho.service';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
+import { environment } from '../../environments/environment.prod';
 
 @Component({
+  selector: 'pedido-list',
   templateUrl: './pedido-list.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
 })
 
 export class PedidoListComponent implements OnInit {

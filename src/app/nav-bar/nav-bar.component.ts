@@ -2,14 +2,31 @@
 import { NavBarService } from './nav-bar.service';
 import { Component, NgZone, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
+
 
 })
 export class NavBarComponent implements OnInit {

@@ -1,10 +1,9 @@
 import { ActivatedRoute } from '@angular/router';
 import { ProdutoService } from './produto.service';
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgModule, NgZone, OnInit } from '@angular/core';
 import { Produto } from './produto';
 import { CarrinhoService } from '../carrinho/carrinho.service';
 import { Carrinho } from '../carrinho/carrinho';
-import { environment } from 'src/environments/environment';
 import { LoginService } from '../login/login.service';
 
 import firebase from 'firebase/compat/app';
@@ -12,6 +11,12 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { Router } from '@angular/router';
 import { interval } from 'rxjs';
+import { environment } from '../../environments/environment.prod';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { StarComponent } from '../star/star.component';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
 
 const config = {
   apiKey: 'AIzaSyAc9T6jV7QRc2sZMeQ3wAFxO2u-SH7dS_A',
@@ -24,6 +29,14 @@ const config = {
 
 @Component({
   templateUrl: './produto-list.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    PhoneNumberComponent,
+    StarComponent
+   ]
 })
 
 export class ProdutoListComponent implements OnInit {

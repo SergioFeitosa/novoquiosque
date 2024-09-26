@@ -1,8 +1,8 @@
 export const environment = {
-  production: false,
+  production: true,
   ApiURL : 'http://localhost:8000',
   telefone: 0,
-  codigo: 123,
+  codigo: 123, 
   local: 'mesa001',
   modulo: 'quiosque',
   login: false,

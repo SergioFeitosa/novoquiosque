@@ -1,12 +1,32 @@
 
+import { CommonModule } from '@angular/common';
 import { environment } from '../../environments/environment.prod';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
 import { CardapioPrincipalService } from './cardapio-principal.service';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { RouterModule } from '@angular/router';
+import { StarComponent } from '../star/star.component';
 
 
 @Component({
   selector: 'app-cardapio-principal',
   templateUrl: './cardapio-principal.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatRadioModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
+
 })
 
 export class CardapioPrincipalComponent implements OnInit {

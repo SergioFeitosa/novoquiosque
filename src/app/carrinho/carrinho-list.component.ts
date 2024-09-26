@@ -1,15 +1,35 @@
 import { StarComponent } from './../star/star.component';
 import { Produto } from '../produto/produto';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { CarrinhoService } from './carrinho.service';
 import { Carrinho } from './carrinho';
 import { Component, OnInit } from '@angular/core';
 import { Pedido } from '../pedido/pedido';
 import { PedidoService } from '../pedido/pedido.service';
-import { environment } from 'src/environments/environment';
 import { Observable, interval, Subscription } from 'rxjs';
+import { environment } from '../../environments/environment.prod';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
 
-@Component({ templateUrl: './carrinho-list.component.html' })
+@Component({ 
+  templateUrl: './carrinho-list.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatRadioModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
+
+})
 
 export class CarrinhoListComponent implements OnInit {
 

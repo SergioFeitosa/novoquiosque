@@ -6,13 +6,13 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import { interval } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { WindowService } from './window.service';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 import { initializeApp } from "firebase/app";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../environments/environment.prod';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAc9T6jV7QRc2sZMeQ3wAFxO2u-SH7dS_A",

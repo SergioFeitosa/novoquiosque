@@ -1,18 +1,42 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, NO_ERRORS_SCHEMA } from '@angular/core';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { Router, RouterModule } from '@angular/router';
 import { ProdutoService } from '../produto/produto.service';
 import { CarrinhoService } from '../carrinho/carrinho.service';
 import { Produto } from '../produto/produto';
 import { Carrinho } from '../carrinho/carrinho';
+import { environment } from '../../environments/environment.prod';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
   styleUrls: ['./code.component.css'],
+  standalone: true,
+  imports: [ 
+    BrowserModule,
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatRadioModule,
+    
+    PhoneNumberComponent,
+    ReactiveFormsModule,
+    RouterModule,
+    StarComponent,
+   ],
+   schemas: [ NO_ERRORS_SCHEMA ]
+
 })
 export class CodeComponent implements OnInit {
   otp!: string;

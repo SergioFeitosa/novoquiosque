@@ -1,4 +1,3 @@
-import { environment } from 'src/environments/environment';
 import { Produto } from '../produto/produto';
 import { PedidoService } from '../pedido/pedido.service';
 import { Pedido } from '../pedido/pedido';
@@ -8,11 +7,27 @@ import { EntregaService } from '../entrega/entrega.service';
 import { interval, Subscription } from 'rxjs';
 import { Carrinho } from '../carrinho/carrinho';
 import { CarrinhoService } from '../carrinho/carrinho.service';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { environment } from '../../environments/environment.prod';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
 
 
 @Component({
+  selector: 'pedidoBar-list',
   templateUrl: './pedidoBar-list.component.html',
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
 })
 
 export class PedidoBarListComponent implements OnInit {

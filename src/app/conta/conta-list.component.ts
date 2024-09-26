@@ -1,16 +1,34 @@
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ContaService } from './conta.service';
 import { Conta } from './conta';
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Pedido } from '../pedido/pedido';
 import { Produto } from '../produto/produto';
 import { PedidoService } from '../pedido/pedido.service';
+import { CaminhoMenuComponent } from '../caminho-menu/caminho-menu.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { PhoneNumberComponent } from '../phone-number/phone-number.component';
+import { StarComponent } from '../star/star.component';
+import { environment } from '../../environments/environment.prod';
+import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   templateUrl: './conta-list.component.html',
   styleUrls: ['./conta-list.component.css'],
+  standalone: true,
+  imports: [ 
+    CaminhoMenuComponent,
+    CommonModule,
+    FormsModule,
+    MatIconModule,
+    MatRadioModule,
+    PhoneNumberComponent,
+    RouterModule,
+    StarComponent,
+   ]
 
 })
 
