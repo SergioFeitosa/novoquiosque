@@ -4,6 +4,13 @@ import { Produto } from '../produto/produto';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterLinkActive, RouterModule } from '@angular/router';
 import { environment } from '../../environments/environment';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-caminho-menu',
@@ -14,7 +21,13 @@ import { environment } from '../../environments/environment';
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
     RouterModule,
-    RouterLinkActive
+    RouterLinkActive,
+    MatCardModule, 
+    MatButtonModule,
+    MatRadioModule,
+    MatSnackBarModule,
+    MatGridListModule,
+    MatIconModule,
   ],
 })
 

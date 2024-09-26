@@ -18,3 +18,4 @@ import { PhoneNumberComponent } from './phone-number/phone-number.component';
 export class AppComponent {
   title = 'novoquiosque';
 }
+

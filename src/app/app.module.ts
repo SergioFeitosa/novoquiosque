@@ -13,10 +13,8 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { RouterModule } from '@angular/router';
 
 
-import { CardapioPrincipalComponent } from './cardapioprincipal/cardapio-principal.component';
 import { CarrinhoCreateComponent } from './carrinho/carrinho-create.component';
 import { CarrinhoDeleteComponent } from './carrinho/carrinho-delete.component';
-import { CarrinhoListComponent } from './carrinho/carrinho-list.component';
 import { CarrinhoModule } from './carrinho/carrinho.module';
 import { CarrinhoReadComponent } from './carrinho/carrinho-read.component';
 import { CarrinhoUpdateComponent } from './carrinho/carrinho-update.component';
@@ -42,6 +40,7 @@ import { NgOtpInputModule } from  'ng-otp-input';
 
 
 @NgModule({ declarations: [
+
         CarrinhoCreateComponent,
         CarrinhoReadComponent,
         CarrinhoUpdateComponent,
